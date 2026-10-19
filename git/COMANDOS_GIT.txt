@@ -1,0 +1,55 @@
+git add .
+git commit -m "Agrega exportación DXF"
+git push
+
+git status
+
+git diff 			# Qué cambió en los archivos 
+git show a84b6e1 	# Qué hizo un commit específico 
+git restore 		# Deshacer cambios no confirmados 
+git checkout 		# Ver una versión anterior del proyecto
+
+Con esos cuatro, además de:
+
+git pull
+git log
+
+
+git log --oneline
+git log --oneline --graph --decorate
+
+ls -la
+
+
+pwd
+ls
+cd <carpeta>
+git status
+git log --oneline
+
+
+pwd
+cd /c/Users/moran/Documents
+git clone https://github.com/tinkatul/civil-tools.git
+
+
+find
+grep
+cat
+less
+head
+tail
+which
+chmod
+
+ls
+pwd
+cd
+mkdir
+
+aunque en realidad internamente ejecuta:
+
+Get-ChildItem
+Get-Location
+Set-Location
+New-Item

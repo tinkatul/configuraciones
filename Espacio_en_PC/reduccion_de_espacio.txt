@@ -1,0 +1,51 @@
+Herramientas útiles que usamos o recomendamos
+WizTree → localizar qué carpetas ocupan más espacio.
+SpaceSniffer
+WinDirStat
+
+pagefile.sys → archivo de memoria virtual o archivo de paginación de Windows.
+powercfg -h off → eliminar el archivo de hibernación.
+cleanmgr → limpieza de Windows.
+%temp% → borrar archivos temporales.
+
+https://chatgpt.com/g/g-p-69aab666634481919786134dbc2e75a6/c/6a49c10e-2fc4-83e9-93a0-52cd7f5c8164
+
+
+
+Pagefile.sys
+
+Opción 1: moverlo a otro disco (tu caso actual)
+Win + R → sysdm.cpl
+Opciones avanzadas → Rendimiento → Configuración
+Opciones avanzadas → Memoria virtual → Cambiar
+Desmarcá Administrar automáticamente...
+Seleccioná C:
+Sin archivo de paginación
+Establecer
+Seleccioná F:
+Tamaño administrado por el sistema
+Establecer
+Aceptá todo y reiniciá.
+
+Después del reinicio, pagefile.sys desaparecerá de C: y aparecerá en F:.
+
+Opción 2: un solo disco (reducir el tamaño)
+
+En la misma ventana:
+
+Desmarcá Administrar automáticamente...
+Seleccioná C:
+Elegí Tamaño personalizado.
+Ingresá un tamaño.
+
+Con 64 GB de RAM, un valor razonable es:
+
+Tamaño inicial: 4096 MB
+Tamaño máximo: 8192 MB
+
+o, si querés ser un poco más conservador:
+
+Inicial: 8192 MB
+Máximo: 16384 MB
+Hacé clic en Establecer.
+Aceptá y reiniciá.

@@ -1,0 +1,96 @@
+Para saber la proyección de una imagen TIF, en OSGeo4W Shell
+
+(es un tipo cmd, Me acordaba que tenías QGIS instalado, pero el detalle era ese:
+
+gdalinfo hay que ejecutarlo desde el OSGeo4W Shell (o QGIS Command Prompt), porque ese entorno ya tiene configuradas las variables de entorno (PATH) para encontrar todas las herramientas de GDAL.)
+
+gdalinfo CURVAS_BDCH.tif
+
+y devuelve algo como: (VER ABAJO)
+
+
+Un dato útil para GDAL
+
+Además de gdalinfo, desde el OSGeo4W Shell vas a tener disponibles muchas herramientas muy útiles:
+
+ogrinfo → inspeccionar capas vectoriales.
+ogr2ogr → convertir y reproyectar Shapefile, KML, GeoPackage, etc.
+gdal_translate → convertir y recortar rasters.
+gdalwarp → reproyectar rasters.
+gdaldem → generar sombreado, pendientes, orientación, etc.
+gdal_contour → generar curvas de nivel desde un DEM.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Driver: GTiff/GeoTIFF
+Files: CURVAS_BDCH.tif
+       CURVAS_BDCH.tif.aux.xml
+Size is 719, 636
+Coordinate System is:
+GEOGCRS["WGS 84",
+    ENSEMBLE["World Geodetic System 1984 ensemble",
+        MEMBER["World Geodetic System 1984 (Transit)"],
+        MEMBER["World Geodetic System 1984 (G730)"],
+        MEMBER["World Geodetic System 1984 (G873)"],
+        MEMBER["World Geodetic System 1984 (G1150)"],
+        MEMBER["World Geodetic System 1984 (G1674)"],
+        MEMBER["World Geodetic System 1984 (G1762)"],
+        MEMBER["World Geodetic System 1984 (G2139)"],
+        MEMBER["World Geodetic System 1984 (G2296)"],
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]],
+        ENSEMBLEACCURACY[2.0]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    USAGE[
+        SCOPE["Horizontal component of 3D system."],
+        AREA["World."],
+        BBOX[-90,-180,90,180]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+Origin = (-69.240694455555555,-37.609027766666671)
+Pixel Size = (0.000277777777778,-0.000277777777778)
+Metadata:
+  AREA_OR_POINT=Point
+Image Structure Metadata:
+  LAYOUT=COG
+  COMPRESSION=LZW
+  INTERLEAVE=BAND
+Corner Coordinates:
+Upper Left  ( -69.2406945, -37.6090278) ( 69d14'26.50"W, 37d36'32.50"S)
+Lower Left  ( -69.2406945, -37.7856944) ( 69d14'26.50"W, 37d47' 8.50"S)
+Upper Right ( -69.0409722, -37.6090278) ( 69d 2'27.50"W, 37d36'32.50"S)
+Lower Right ( -69.0409722, -37.7856944) ( 69d 2'27.50"W, 37d47' 8.50"S)
+Center      ( -69.1408333, -37.6973611) ( 69d 8'27.00"W, 37d41'50.50"S)
+Band 1 Block=256x256 Type=Float32, ColorInterp=Gray
+  Min=796.713 Max=1280.180
+  Minimum=796.713, Maximum=1280.180, Mean=962.611, StdDev=89.472
+  Metadata:
+    STATISTICS_MAXIMUM=1280.1795654297
+    STATISTICS_MEAN=962.61100872605
+    STATISTICS_MINIMUM=796.71307373047
+    STATISTICS_STDDEV=89.472433657038
+    STATISTICS_VALID_PERCENT=100
